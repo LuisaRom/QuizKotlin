@@ -3,21 +3,21 @@ import java.util.Scanner
 fun main() {
 
     val producto = mutableListOf<Producto>()
-    val scanner = Scanner(System.in)
+    val scanner = Scanner(System.`in`)
 
     while (true){
 
         println("\n TIENDA")
-        println("\n 1. Crear Producto")
-        println("\n 2. Vender Producto")
-        println("\n 3. Reponer Stock")
-        println("\n 4. Aplicar Descuento")
-        println("\n 5. Informacion Productos")
-        println("\n 6. Aumentar Precio")
-        println("\n 7. Calcular Total Inventario")
-        println("\n 8. Eliminar Producto Por Codigo")
-        println("\n 9. Salir")
-        println("\n Seleccione una Opcion:")
+        println("1. Crear Producto")
+        println("2. Vender Producto")
+        println("3. Reponer Stock")
+        println("4. Aplicar Descuento")
+        println("5. Informacion Productos")
+        println("6. Aumentar Precio")
+        println("7. Calcular Total Inventario")
+        println("8. Eliminar Producto Por Codigo")
+        println("9. Salir")
+        println("Seleccione una Opcion:")
 
         when (scanner.nextInt()) {
             1 -> {
@@ -91,8 +91,8 @@ fun main() {
             8 -> {
                 print("Ingrese código del producto a eliminar: ")
                 val codigo = scanner.next()
-                val eliminado = producto.removeIf { it.codigo == codigo }
-                if (eliminado) {
+                val eliminar = producto.removeIf { it.codigo == codigo }
+                if (eliminar) {
                     println("Producto eliminado correctamente.")
                 } else {
                     println("Producto no encontrado.")

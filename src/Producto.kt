@@ -66,5 +66,15 @@ class Producto {
         println("El valor total en inventario de $nombre es: $total")
         return total
     }
+
+    fun eliminar(scanner: Scanner, productos: MutableList<Producto>) {
+        println("Ingresar Codigo Producto:")
+        val eliminar = productos.removeIf { it.codigo == codigo }
+        if (eliminar) {
+            println("Prodcuto Eliminado")
+        } else {
+            println("Producto no encontrado")
+        }
+    }
 }
 
